@@ -10,6 +10,10 @@ int main() {
     });
     cout << "Found Min: " << (*m)[1] << " " << "Next to it: " << (*m)[0] << endl;
     cout << "ROw at: " << m - a.begin() <<endl;
+
+    string c = "ab";
+    string d = "defabhi";
+    cout << "Find op: " << d.find(c);
     return 0;
 }
 

@@ -1,5 +1,5 @@
+# one_block - Problem 1
 
-#one_block
 Valid One Block Partitions
 
 You are part of the resource distribution team in your company, where resource values are analyzed in contiguous groups. A One Block is defined as a continuous segment of the array whose total sum is exactly 1.
@@ -52,3 +52,48 @@ Limits
 Time Limit: 1.0 sec(s) for each input file
 Memory Limit: 256 MB
 Source Limit: 1024 KB
+
+# optimal_load_balancing - Problem 2
+
+Optimal Server Load Balancing
+
+You are managing a network of servers, each capable of handling a certain number of tasks concurrently. You receive a batch of tasks with varying resource requirements, and you need to assign each task to a server such that:
+• No server is assigned tasks exceeding its capacity. 
+• The maximum load difference between any two servers is minimized.
+
+Here, the load of a server is the total resource requirement of the tasks assigned to it.
+Your task is to find the minimal possible maximum load difference between the most loaded server and the least loaded server after assigning all tasks optimally.
+Parameters:
+• 'servers' (int): The number of servers available.
+• capacities' (List[int]): A list of integers where 'capacities[i]' represents the maximum concurrent capacity (maximum total resource load) of the 'i-th' server.
+• T(int): The number of tasks.
+• 'tasks' (List[int]): A list of integers representing the resource requirement of each task.
+
+Return:
+• An integer representing the minimal possible maximum load difference achievable after assigning all tasks optimally.
+
+Input Format:
+• The first line contains an integer 'servers', the number of servers.
+• The second line contains 'servers' space-separated integers denoting the capacities of each server.
+• The third line contains an integer 'T', the number of tasks.
+• The fourth line contains 'T' space-separated integers representing the resource requirement of each task.
+
+• A single integer denoting the minimal possible maximum load difference.
+1 ≤ capacities[i] ≤ 10°
+• 1 ≤ T ≤ 105
+• 1 ≤ tasks[i] ≤ 106
+• Sum of tasks[i] ≤ sum of capacities[i]
+
+Sample input:
+4
+10 10 10 10
+6
+2 4 5 6 3 1
+
+Sample output:
+1
+
+Explanation
+You have 4 servers each with capacity 10, and 6 tasks with sizes [2, 4, 5, 6, 3, 1].
+The goal is to assign tasks so no server exceeds capacity and the difference between the busiest and least busy server is minimized.
+Here, the minimal possible difference is 1, meaning the loads can be balanced very evenly across servers without overloading any.
